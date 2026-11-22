@@ -1,0 +1,5 @@
+interface:
+  display_name: "Promote to agent-setup"
+  short_description: "Move an improvement from this project into agent-setup"
+policy:
+  allow_implicit_invocation: false

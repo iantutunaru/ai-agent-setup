@@ -1,0 +1,9 @@
+.claude/worktrees/
+.claude/settings.local.json
+__pycache__/
+*.pyc
+*.log
+# Anthropic's own skills, written into ~/.claude/skills/synced by a Claude program (SU-Q37)
+global/skills/synced/
+# Each person's own files (SU-Q90): the installs make them from global/*.example.*
+local/

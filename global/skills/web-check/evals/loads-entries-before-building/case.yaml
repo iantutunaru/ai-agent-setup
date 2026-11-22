@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: loads-entries-before-building
+expected_outcome: |
+  The run loads the rulebook's entries on forms, phone and buttons before it writes any HTML, says which entries the form is built to, writes form.html, then checks the result from the code and reports in the skill's template.

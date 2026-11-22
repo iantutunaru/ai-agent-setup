@@ -1,0 +1,40 @@
+# Everyone's yes on a change to the shared core, as a check GitHub runs (SU-Q105).
+# tools/core_approvals.py sets the commit status "core-approvals" on the pull request's head commit:
+# red until every owner named in .github/CODEOWNERS for a changed file, other than the author, has
+# approved that commit. A status is used instead of this job's own result because a push and a review
+# start separate runs, and the latest status of a context on a commit is the one that counts.
+# "core-approvals" is a required check in the branch protection of main; this job's own name is not.
+name: Core approvals
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
+  pull_request_review:
+    types: [submitted, edited, dismissed]
+
+permissions:
+  contents: read
+  pull-requests: read
+  statuses: write
+
+# One run per pull request at a time; a newer waiting run replaces an older waiting one. Each run reads
+# the pull request's current state, so the last one to finish sets the right status.
+concurrency:
+  group: core-approvals-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+
+jobs:
+  decide:
+    name: read approvals
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.x"
+      - name: Set the core-approvals status
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python tools/core_approvals.py

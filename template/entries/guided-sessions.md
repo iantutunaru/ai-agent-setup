@@ -1,0 +1,1 @@
+- **Guided sessions:** `docs/sessions.md` (notes for a round the user does; where the user tests: <where>).

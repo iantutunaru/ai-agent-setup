@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: writes-enquiry-form-strings
+expected_outcome: |
+  A frame, the `text` entries loaded (titles text all read in full, find for the nouns, show), the strings, one line per entry shown (met, bent, does not apply), the writing-check scripts run on the strings, and the hand-over block with Entries behind it, Bent and For you to check.

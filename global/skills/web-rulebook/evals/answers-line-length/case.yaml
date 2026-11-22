@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: answers-line-length
+expected_outcome: |
+  An answer from entries found with `find` and read with `show`: each claim carries an id and the mark rule or practice. Where entries give different numbers, both stand in the answer with their ids, and every Conflict line of the cited entries is passed on.

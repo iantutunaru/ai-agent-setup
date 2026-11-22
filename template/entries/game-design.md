@@ -1,0 +1,14 @@
+- **Game design:**
+  - Vision: none yet
+  - Rules: none yet
+  - Data: none yet
+  - Backlog: none yet
+  - Playtests: none yet
+  - Builds: none yet
+  - Levers: none yet
+  - Batch: none yet
+  - Probe: none yet
+  - Tests: none yet
+  - Fairness: none yet
+  - Match length: none yet
+  - Also: none yet

@@ -1,0 +1,30 @@
+{
+  "autoMode": {
+    "environment": [
+      "### Org-wide",
+      "**Organization**: FILL IN, e.g. None (one person's own machines: a desktop PC and a laptop, both Windows)",
+      "**Cloud provider(s)**: None configured",
+      "**Repository visibility**: FILL IN, e.g. my GitHub repos under github.com/MY-NAME/ are private; assume private unless a visibility check in the transcript shows public",
+      "**Internal sharing / snippet hosting**: None configured; treat public paste/gist services as outside the trust boundary",
+      "**Secrets management**: local `.env` files I fill in (gitignored, never read or printed by Claude); FILL IN where the GitHub login is kept, e.g. Git Credential Manager",
+      "**Default / protected branches**: `main` or `master` per repo",
+      "**CI/CD deploy targets**: None configured",
+      "**Network posture**: None configured",
+      "**Host containment**: None; Claude Code runs on ordinary Windows machines with open internet",
+      "**Source control**: git repos under {{PROJECTS}}\\<project> (one repo per project) and their remotes under FILL IN, e.g. github.com/MY-NAME/; the shared setup repo is linked at ~/.claude/setup",
+      "**Trusted internal domains**: FILL IN, e.g. github.com/MY-NAME (my own account)",
+      "**Trusted cloud buckets**: None configured",
+      "**Key internal services**: None configured",
+      "**Internal package registry**: None configured",
+      "**Sensitive data locations & audiences**: FILL IN which project folders hold personal or business files that must stay on the machine",
+      "**Data retention / declassification**: None configured",
+      "**Sensitive remote targets**: any namespace, host, or container whose name carries `prod` or `production` as a whole word or name segment (hyphen/underscore/dot-delimited, e.g. matches `prod-db`, not `producer`)",
+      "**Protected deployment namespaces / environments**: None configured; fall back to the Sensitive remote targets heuristic",
+      "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries `prod` or `production` as a whole word or name segment",
+      "### User-specific",
+      "**Primary use of Claude Code**: FILL IN, e.g. software development and document work",
+      "**Trusted repos**: every git repo under {{PROJECTS}}\\ (my projects) with its FILL IN remote, plus the agent-setup repo",
+      "**Org-specific CLIs**: None configured"
+    ]
+  }
+}

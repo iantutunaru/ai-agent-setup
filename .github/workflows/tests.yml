@@ -1,0 +1,41 @@
+# The four test suites of the tests list in CONTRIBUTING.md, on every push and every pull request (SU-Q96).
+# One job per machine type. The job names "tests (ubuntu-latest)" and "tests (windows-latest)" become
+# required checks in the branch protection of main, so keep them as they are.
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: tests (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    env:
+      # As global/settings.json sets it for every chat.
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.x"
+      - name: stage-close
+        run: python -m unittest discover -s global/skills/stage-close/tests -v
+      - name: web-rulebook
+        if: ${{ !cancelled() }}
+        run: python -m unittest discover -s global/skills/web-rulebook/tests -v
+      - name: balance-check
+        if: ${{ !cancelled() }}
+        run: python -m unittest discover -s global/skills/balance-check/tests -v
+      - name: tools
+        if: ${{ !cancelled() }}
+        run: python -m unittest discover -s tools/tests -v

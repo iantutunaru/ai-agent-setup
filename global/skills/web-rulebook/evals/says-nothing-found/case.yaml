@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: says-nothing-found
+expected_outcome: |
+  The run searches with several wordings (cookie, consent, banner, privacy, pop-up) and then says plainly what the rulebook holds: nothing on cookie banners as such, if that is what the searches show. Neighbouring entries (pop-ups, interruptions) are offered as neighbours with ids, never as a rule on cookie banners. Advice from general knowledge is labelled as that.

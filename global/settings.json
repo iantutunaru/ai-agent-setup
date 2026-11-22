@@ -1,0 +1,43 @@
+{
+  "env": {
+    "PYTHONUTF8": "1",
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "enabledPlugins": {
+    "mattpocock-skills@mattpocock": true,
+    "humanizer@humanizer": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-plugins-official": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/anthropics/claude-plugins-official.git"
+      }
+    },
+    "mattpocock": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/mattpocock/skills.git"
+      }
+    },
+    "humanizer": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/blader/humanizer.git"
+      }
+    }
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/setup/global/hooks/session-start.sh\"",
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  }
+}

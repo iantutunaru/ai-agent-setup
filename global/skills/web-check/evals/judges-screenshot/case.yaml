@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: judges-screenshot
+expected_outcome: |
+  A report in the skill's template that says nothing was measured. Every verdict's evidence is `judged`, with what was seen and where in the picture. Nothing is claimed that a picture cannot show (alt texts, the heading order in the code, a contrast ratio as a measured number).
+context:
+  scaffold_script: place-files.sh

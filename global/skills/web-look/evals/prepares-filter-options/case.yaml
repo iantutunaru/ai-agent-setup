@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: prepares-filter-options
+expected_outcome: |
+  A frame, the entries loaded (titles look, find with --use look and --use check, ideas, taste), the sort into fixed, open and settled, no ideas shown (the project has no ideas file), then 2 to 4 options each with Answers, Follows and Bends lines, the common ground once, and a recommendation that says whether it rests on a rule, a practice or taste. No pick is made.

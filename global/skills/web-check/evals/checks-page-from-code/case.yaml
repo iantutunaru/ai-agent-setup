@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: checks-page-from-code
+expected_outcome: |
+  A report in the skill's template. Evidence is marked `from the code`, never `measured`. The findings name the faults the code shows: grey #999 text on white, the heading that skips from h1 to h3, the email field with only a placeholder, the 20 px button, the link that says "click here", the image without alt, the zoom blocked in the viewport line, the 800 px block that overflows a phone. Every cited id was shown in the run.
+context:
+  scaffold_script: place-files.sh

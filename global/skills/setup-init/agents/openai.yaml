@@ -1,0 +1,5 @@
+interface:
+  display_name: "Set up a new project"
+  short_description: "Start a new project from the agent-setup template"
+policy:
+  allow_implicit_invocation: false

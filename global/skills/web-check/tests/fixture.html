@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>measure.js fixture</title>
+<!-- A page with known faults, for trying measure.js by hand. Expected values: tests/expected.md -->
+<style>
+  body { margin: 20px; font: 16px/1.5 Arial, sans-serif; color: #000; background: #fff; }
+  .low { color: #999; }
+  .wide { width: 800px; }
+  .narrow { width: 200px; font-size: 12px; line-height: 12px; }
+  .tiny { width: 20px; height: 20px; padding: 0; border: 0; }
+  .big { width: 120px; height: 44px; }
+  .hero { background: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"); color: #fff; padding: 8px; }
+  label { display: block; }
+  u { color: #000; }
+</style>
+</head>
+<body>
+<h1>Fixture page</h1>
+<h3>A heading that skips a level</h3>
+<p class="low">Grey text on white, set in the colour 999999 so that its contrast ratio is known in advance.</p>
+<p class="wide">A wide paragraph. This block is eight hundred pixels wide at sixteen pixels, which gives a long line. The text goes on for long enough to fill at least three lines at that width, so that the script counts its lines and works out the characters on a full line. One more sentence follows here to make sure of the third line, and then another one after it for good measure, and a last one.</p>
+<p class="narrow">A narrow paragraph of small type set solid, twelve on twelve, in a column two hundred pixels wide, long enough for several lines.</p>
+<p>Read the terms <a href="#terms" style="color: #000; text-decoration: none;">in this plain link</a> before you go on with the rest of this sentence.</p>
+<p><u>Underlined but no link</u></p>
+<p class="hero">White text over a picture</p>
+<button class="tiny">x</button>
+<button class="big">Send</button>
+<a href="https://example.org/" target="_blank">click here</a>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width: 100px; height: 50px;">
+<img alt="A grey square" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1" height="1" style="width: 30px; height: 30px;">
+<form>
+  <label for="name">Your name</label>
+  <input id="name" type="text" autocomplete="name">
+  <input type="email" placeholder="Email" style="font-size: 12px;">
+</form>
+</body>
+</html>

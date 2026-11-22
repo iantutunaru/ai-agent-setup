@@ -1,0 +1,20 @@
+# The shared core: the files every chat loads or every machine runs (SU-Q89), and .github/ (SU-Q106).
+# A change to any of them waits for a yes from every owner named on its line, other than its author.
+#
+# Adding an owner: only someone with write access to the repo (a line naming someone without
+# write access is invalid and GitHub skips it). Add their @login to the end of every line below, so each
+# line names everyone, for example:  /tools/ @iantutunaru @second-owner
+#
+# These lines are also what the core-approvals check reads (tools/core_approvals.py,
+# .github/workflows/core-approvals.yml). It understands only the forms used here: a path from the repo's
+# root starting with "/", a "*" inside a name, a trailing "/" for a folder, and @login owners. Any other
+# form turns the check red and names the line.
+
+/global/rules*.md @iantutunaru
+/profiles/ @iantutunaru
+/global/settings.json @iantutunaru
+/global/hooks/ @iantutunaru
+/install.ps1 @iantutunaru
+/install-chatgpt.ps1 @iantutunaru
+/tools/ @iantutunaru
+/.github/ @iantutunaru

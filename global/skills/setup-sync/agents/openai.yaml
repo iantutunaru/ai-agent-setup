@@ -1,0 +1,5 @@
+interface:
+  display_name: "Sync with agent-setup"
+  short_description: "Bring this project up to date with agent-setup"
+policy:
+  allow_implicit_invocation: false
